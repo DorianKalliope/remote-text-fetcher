@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import { exec } from 'child_process';
 
 export function activate(context: vscode.ExtensionContext) {
-    const config = vscode.workspace.getConfiguration('agentService');
+    const config = vscode.workspace.getConfiguration('remoteTextFetcher');
     const url = config.get<string>('url') || 'http://localhost:3000/file.txt';
 
     fetch(url)
